@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*mixin*/
+/*color*/
+/*general*/
+body {
+  font-family: "Noto Serif JP", serif;
+  font-family: "Source Serif Pro", serif;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+main {
+  margin-top: 80px;
+}
+
+/*header*/
+.header {
+  background-color: #202f55;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1002;
+}
+.header-wrap {
+  display: flex;
+  height: 80px;
+  align-items: center;
+}
+.header-title {
+  font-weight: bold;
+  font-size: 1.625rem;
+}
+.header-nav {
+  margin-left: auto;
+}
+.header-nav ul {
+  display: flex;
+}
+.header-nav__list a {
+  display: inline-block;
+  position: relative;
+}
+.header-nav__list a::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0;
+}
+.header-nav__list a::after {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  transform: translate(50%, 0);
+  bottom: -5px;
+  left: 0;
+  height: 1px;
+  width: 50%;
+  background-color: #fff;
+  opacity: 0;
+}
+.header-nav__list:hover ::before {
+  opacity: 1;
+}
+.header-nav__list:hover ::after {
+  opacity: 1;
+}
+
+/*key-visual*/
+.key {
+  background: url("/src/assets/img/key01.jpg");
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+.key-deco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 200vh;
+  z-index: 1000;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: #48619b;
+}
+.key .container {
+  height: calc(100vh - 80px);
+}
+
+.catchcopy {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1001;
+}
+.catchcopy-area__title {
+  color: #fff;
+  font-size: 3.75rem;
+  margin-bottom: 20px;
+}
+.catchcopy-area__subtitle {
+  color: #fff;
+  font-size: 1.875rem;
+  margin-bottom: 20px;
+}
+.catchcopy-area__text {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.catchcopy-area__text span {
+  border-right: #fff solid 1px;
+}
+.catchcopy-area__text span:last-child {
+  border-right: none;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  z-index: 1002;
+  border-bottom: #202f55 2px solid;
+  margin-bottom: 40px;
+}
+.section-title span {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.section-title.-white {
+  color: #fff;
+  font-size: 1.875rem;
+  z-index: 1002;
+  border-bottom: #a0a0a0 2px solid;
+  margin-bottom: 40px;
+}
+.section-title.-white span {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+/*news*/
+.news-list {
+  margin-bottom: 20px;
+}
+.news-list-item {
+  display: inline-block;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.news-list-item__date {
+  display: inline-block;
+  margin-right: 40px;
+}
+.news-list-item__label {
+  display: inline-block;
+  margin-right: 40px;
+}
+.news-list-item__text {
+  display: inline-block;
+}
+.news .newsarea {
+  display: flex;
+  justify-content: center;
+}
+
+.list-all-btn a {
+  display: inline-block;
+  padding: 10px 40px 10px 20px;
+  border: 1px solid #48619b;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.list-all-btn a::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: #48619b;
+  top: 50%;
+  right: -20px;
+}
+.list-all-btn a:hover {
+  color: #fff;
+  background-color: #48619b;
+}
+
+.about {
+  background-color: #48619b;
+}
+
+.footer {
+  background-color: #202f55;
+  color: #fff;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-title {
+  font-size: 24px;
+}
+.footer-copy {
+  display: block;
+}/*# sourceMappingURL=index.css.map */
