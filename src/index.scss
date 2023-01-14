@@ -215,15 +215,26 @@ main {
 .about {
   background-color: $c-sub;
 }
+.contact {
+  background-color: $c-sub;
+}
 .footer {
   background-color: $c-main;
   color: $c-white;
   &-wrap {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &-nav {
+    margin-left: auto;
+    font-size: rem(12);
+    ul {
+      display: flex;
+    }
   }
   &-title {
-    font-size: 24px;
+    font-size: rem(20);
   }
   &-copy {
     display: block;

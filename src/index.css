@@ -204,16 +204,28 @@ main {
   background-color: #48619b;
 }
 
+.contact {
+  background-color: #48619b;
+}
+
 .footer {
   background-color: #202f55;
   color: #fff;
 }
 .footer-wrap {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.footer-nav {
+  margin-left: auto;
+  font-size: 0.75rem;
+}
+.footer-nav ul {
+  display: flex;
 }
 .footer-title {
-  font-size: 24px;
+  font-size: 1.25rem;
 }
 .footer-copy {
   display: block;
