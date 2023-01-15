@@ -47,7 +47,7 @@ const News = () => {
               </li>
             </ul>
           </div>
-          <div className="list-all-btn text-center">
+          <div className="list-all-btn text-right">
             <a href="">一覧を見る</a>
           </div>
         </div>

@@ -8,7 +8,7 @@ const Key = () => {
           <div className="catchcopy">
             <div className="catchcopy-area">
               <h1 className="catchcopy-area__title">Wellcome My Portfolio Site.</h1>
-              <h2 className="catchcopy-area__subtitle">埼玉県在住のフロントエンドエンジニア</h2>
+              <h2 className="catchcopy-area__subtitle">フロントエンドエンジニア</h2>
               <p className="catchcopy-area__text">
                 <span className="pr-2">HTML</span>
                 <span className="px-2">CSS</span>

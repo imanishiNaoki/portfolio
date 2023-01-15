@@ -8,8 +8,8 @@ const Contact = () => {
           <h2 className="section-title -white">
             CONTACT<span>お問い合せ</span>
           </h2>
-          <div className="list-all-btn text-right">
-            <a href="">一覧を見る</a>
+          <div className="contact-btn">
+            <a href="">お問い合わせはこちらから</a>
           </div>
         </div>
       </div>

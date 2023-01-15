@@ -5,9 +5,9 @@ const Header = () => {
     { title: "HOME", link: "#" },
     { title: "NEWS", link: "#news" },
     { title: "ABOUT", link: "#about" },
-    { title: "WORK", link: "#" },
-    { title: "BLOG", link: "#" },
-    { title: "CONTACT", link: "#" },
+    { title: "SKILL", link: "#skill" },
+    { title: "WORK", link: "#work" },
+    { title: "CONTACT", link: "#contact" },
   ];
   const linkList = linkData.map((value) => (
     <li className="header-nav__list" key={value.title}>
