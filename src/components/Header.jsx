@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header id="header">
       <div className="header">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-8">
           <div className="header-wrap">
             <h1 className="header-title">Imanishi Portfolio</h1>
             <nav className="header-nav">
