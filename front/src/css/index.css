@@ -11,6 +11,35 @@
 /*----------------------------
   global
 -----------------------------*/
+.button a {
+  padding: 10px 40px 10px 20px;
+  background-color: #f4f4f1;
+  display: inline-block;
+  font-size: 0.875rem;
+  border-radius: 2px/2px;
+  box-shadow: 2px 2px 2px #d1d1d1;
+  position: relative;
+}
+.button a::before {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  content: "";
+  display: block;
+  height: 7px;
+  width: 7px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  transform: translate(0, -50%);
+  rotate: 45deg;
+}
+
+@media screen and (min-width: 768px) {
+  .sp-show {
+    display: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 20px;
@@ -19,20 +48,172 @@ html {
 body {
   font-family: "Noto Serif JP", serif;
   font-family: "Source Serif Pro", serif;
+  color: #333333;
 }
 
 /*----------------------------
   header
 ----------------------------*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header-wrap {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header-wrap {
+    height: 90px;
+  }
+}
+.header-logo {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 1000px) {
+  .header-logo {
+    font-size: 1.625rem;
+  }
+}
+.header-menu {
+  padding: 10px;
+  margin-right: -10px;
+}
+@media screen and (min-width: 1000px) {
+  .header-menu {
+    display: none;
+  }
+}
+.header-menu span {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background-color: #333333;
+}
+.header-menu :first-child {
+  margin-bottom: 5px;
+}
+.header-menu :last-child {
+  margin-top: 5px;
+}
+.header-navi {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .header-navi {
+    display: block;
+  }
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav-list a {
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 1000px) {
+  .header-nav-list a {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 20px;
+  }
+}
+
 /*----------------------------
   main
 ----------------------------*/
+.main {
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    margin-top: 90px;
+  }
+}
+
 /*----------------------------
   Footer
 -----------------------------*/
 /*----------------------------
   Key
 ----------------------------*/
+.key {
+  position: relative;
+}
+.key-area {
+  background: url("../img/key-01.jpg");
+  background-position: right -80px bottom 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 60px);
+  margin-left: 80px;
+  position: relative;
+}
+@media screen and (min-width: 1000px) {
+  .key-area {
+    height: calc(100vh - 90px);
+    margin-left: 110px;
+  }
+}
+.key-content {
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  left: -40px;
+}
+@media screen and (min-width: 1000px) {
+  .key-content {
+    left: 0;
+  }
+}
+.key-title {
+  font-size: 1.875rem;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .key-title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .key-title {
+    font-size: 3.75rem;
+  }
+}
+.key-sub {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1000px) {
+  .key-sub {
+    font-size: 1.625rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .key-sub {
+    font-size: 2.5rem;
+  }
+}
+.key-skill {
+  font-size: 0.75rem;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1000px) {
+  .key-skill {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .key-skill {
+    font-size: 1.25rem;
+  }
+}
+
 /*----------------------------
   News
 ----------------------------*/
