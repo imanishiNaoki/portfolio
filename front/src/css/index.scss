@@ -1,0 +1,84 @@
+/*----------------------------
+  sass function
+-----------------------------*/
+/*rem変換*/
+$baseFontSize: 16;
+@function rem($pixels) {
+  @return $pixels / $baseFontSize * 1rem;
+}
+/*ブレイクポイント*/
+$breakpoints: (
+  "sm": "screen and (min-width: 400px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1000px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+/*変数*/
+$c-white: #fff;
+$c-black: #000;
+
+/*----------------------------
+  global
+-----------------------------*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+body {
+  font-family: "Noto Serif JP", serif;
+  font-family: "Source Serif Pro", serif;
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+p {
+}
+span {
+}
+/*----------------------------
+  header
+----------------------------*/
+
+/*----------------------------
+  main
+----------------------------*/
+
+/*----------------------------
+  Footer
+-----------------------------*/
+
+/*----------------------------
+  Key
+----------------------------*/
+
+/*----------------------------
+  News
+----------------------------*/
+
+/*----------------------------
+  About
+----------------------------*/
+
+/*----------------------------
+  Work
+----------------------------*/
+
+/*----------------------------
+  Flow
+----------------------------*/
+
+/*----------------------------
+  Contact
+----------------------------*/
