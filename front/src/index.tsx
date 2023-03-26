@@ -3,15 +3,13 @@ import ReactDOM from "react-dom/client";
 //import { BrowserRouter, Route } from "react-router-dom";
 import "./css/index.css";
 import reportWebVitals from "./reportWebVitals";
-import Header from "./components/01_header/Header";
-import Main from "./components/02_main/01_Top/Main";
-import Footer from "./components/03_footer/Footer";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <>
-    <Header />
-    <Main />
+    <App />
+    {/* */}
   </>
 );
 

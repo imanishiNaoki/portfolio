@@ -1,11 +1,11 @@
 import React from "react";
 
-const Key = () => {
+const key = () => {
   return (
-    <div className="key">
-      <div className="key-area">
-        <div className="key-content">
-          <div className="key-text">
+    <section id="key">
+      <div className="key">
+        <div className="container mx-auto px-4">
+          <div className="key-content">
             <p className="key-title">
               WEBで創る、
               <br className="sp-show" />
@@ -16,15 +16,15 @@ const Key = () => {
               <br className="sp-show" />
               フロントエンドエンジニア
             </p>
-            <p className="key-skill">HTML｜CSS｜JavaScript｜jQuery｜React｜Node.js</p>
-          </div>
-          <div className="button">
-            <a href="#">Contact us</a>
+            <p className="key-text">HTML｜CSS｜JavaScript｜jQuery｜React｜Node.js</p>
+            <div className="button">
+              <a href="#">Contact</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Key;
+export default key;
