@@ -1,12 +1,12 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <div className="container mx-auto px-4">
         <div className="header-wrap">
           <div className="header-logo">
-            <a href="">Imanishi Portfolio</a>
+            <Link to={`/`}>Imanishi Portfolio</Link>
           </div>
           <button className="header-hamburger">
             <span></span>
@@ -17,19 +17,13 @@ const Header = () => {
             <nav>
               <ul className="header-navi">
                 <li className="header-navi-list">
-                  <a href="">Home</a>
+                  <Link to={`/`}>Home</Link>
                 </li>
                 <li className="header-navi-list">
-                  <a href="">Info</a>
+                  <a href="#about">About</a>
                 </li>
                 <li className="header-navi-list">
-                  <a href="">About</a>
-                </li>
-                <li className="header-navi-list">
-                  <a href="">Work</a>
-                </li>
-                <li className="header-navi-list">
-                  <a href="">Contact</a>
+                  <Link to={`/contact`}>Contact</Link>
                 </li>
               </ul>
             </nav>

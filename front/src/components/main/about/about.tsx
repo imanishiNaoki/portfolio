@@ -10,7 +10,21 @@ const about = () => {
               <span>About</span>
             </h2>
             <div className="about-content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quae consectetur, pariatur molestias dolor quia aspernatur. Consequuntur velit alias ipsa asperiores adipisci. Quae sequi accusamus ad in provident necessitatibus ut nihil, quas maiores blanditiis explicabo ipsum, voluptate odit cumque rerum iure ullam, aperiam doloribus magni corporis obcaecati! Sequi, repellendus ratione?</p>
+              <p>
+                兵庫県宝塚出身。
+                <br className="sp-show" />
+                高校卒業してすぐに町工場に就職。
+                <br />
+                工場の立ち上げメンバーとして千葉に転勤し、
+                <br className="sp-show" />
+                自工程のリーダーとして従事。
+              </p>
+              <p>IT業界への働き方に魅力を感じ転職を決意。</p>
+              <p>
+                テスター、WEB運用監視を経て、
+                <br className="sp-show" />
+                現在フロントエンドエンジニアとして働いております。
+              </p>
             </div>
           </div>
         </div>

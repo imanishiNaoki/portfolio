@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const key = () => {
   return (
     <section id="key">
@@ -18,7 +18,7 @@ const key = () => {
             </p>
             <p className="key-text">HTML｜CSS｜JavaScript｜jQuery｜React｜Node.js</p>
             <div className="button">
-              <a href="#">Contact</a>
+              <Link to={`/contact`}>Contact</Link>
             </div>
           </div>
         </div>

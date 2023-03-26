@@ -15,16 +15,6 @@ const info = () => {
                 <br className="sp-show" />
                 <span className="info-text">ホームページをリニューアルしました</span>
               </li>
-              <li className="info-list-item">
-                <span className="info-date">2023/03/26</span>
-                <br className="sp-show" />
-                <span className="info-text">ホームページをリニューアルしました</span>
-              </li>
-              <li className="info-list-item">
-                <span className="info-date">2023/03/26</span>
-                <br className="sp-show" />
-                <span className="info-text">ホームページをリニューアルしました</span>
-              </li>
             </ul>
           </div>
         </div>

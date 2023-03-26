@@ -57,15 +57,34 @@ $c-4: #ffffff;
       right: 20px;
     }
   }
+  button {
+    display: inline-block;
+    padding: 16px 60px;
+    font-size: rem(16);
+    background-color: $c-1;
+    border-radius: 3px/3px;
+    box-shadow: 3px 3px 3px #dadada;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      border-top: 1px solid #707070;
+      border-right: 1px solid #707070;
+      width: 8px;
+      height: 8px;
+      transform: translate(0, -50%) rotate(45deg);
+      top: 50%;
+      right: 20px;
+    }
+  }
 }
 .sp-show {
-  @include mq(md) {
+  @include mq(lg) {
     display: none;
   }
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 20px;
 }
 body {
   font-family: "Noto Serif JP", serif;
@@ -82,6 +101,7 @@ h4 {
 h5 {
 }
 p {
+  margin-bottom: 20px;
 }
 span {
 }
@@ -89,14 +109,22 @@ span {
   header
 ----------------------------*/
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
   &-wrap {
-    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     @include mq(lg) {
       height: 120px;
     }
+  }
+  &-logo {
+    font-size: rem(20);
   }
   &-nav-wrap {
     display: none;
@@ -130,11 +158,70 @@ span {
   main
 ----------------------------*/
 .main {
+  margin-top: 60px;
+  overflow: hidden;
+  @include mq(lg) {
+    margin-top: 120px;
+  }
 }
 /*----------------------------
   Footer
 -----------------------------*/
 .footer {
+  background-color: $c-3;
+  color: $c-1;
+  font-size: rem(14);
+  padding: 20px 0;
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &-logo {
+    margin-bottom: 20px;
+    @include mq(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-navi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq(md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &-list {
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+      }
+    }
+  }
+  &-sns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    @include mq(md) {
+      margin-top: 40px;
+      justify-content: flex-end;
+    }
+    img {
+      width: 36px;
+      margin: 0 10px;
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+  }
+  &-copy {
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 /*----------------------------
   Key
@@ -153,15 +240,27 @@ span {
   }
 
   &-title {
-    font-size: rem(44);
+    font-size: rem(36);
     margin-bottom: 40px;
+    @include mq(md) {
+      font-size: rem(44);
+      margin-bottom: 40px;
+    }
   }
   &-sub {
-    font-size: rem(24);
+    font-size: rem(18);
     margin-bottom: 20px;
+    @include mq(md) {
+      font-size: rem(24);
+      margin-bottom: 20px;
+    }
   }
+
   &-text {
     font-size: rem(12);
+    @include mq(md) {
+      font-size: rem(16);
+    }
   }
 }
 /*----------------------------
@@ -180,7 +279,7 @@ span {
   @include mq(lg) {
     width: 800px;
     margin-left: auto;
-    margin-top: -140px;
+    margin-top: -100px;
     margin-bottom: 100px;
   }
   &-wrap {
@@ -211,9 +310,6 @@ span {
     &-item {
       margin-bottom: 20px;
       font-size: rem(16);
-      @include mq(lg) {
-        font-size: rem(20);
-      }
     }
     :last-child {
       margin-bottom: 0;
@@ -235,22 +331,21 @@ span {
   color: $c-3;
   padding: 40px 0;
   position: relative;
-
+  margin-bottom: 60px;
   &::before {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     top: 0;
     left: 0;
-    width: 70vw;
-    height: 160px;
+    width: 90vw;
+    height: 140px;
     background-color: $c-2;
-  }
-  &-wrap {
     @include mq(lg) {
-      padding: 0 60px;
+      height: 200px;
     }
   }
+
   &-title {
     font-size: rem(28);
     margin-bottom: 40px;
@@ -273,6 +368,7 @@ span {
   &-content {
     width: 100%;
     font-size: rem(16);
+    position: relative;
     @include mq(lg) {
       font-size: rem(20);
       width: 50%;
@@ -293,4 +389,113 @@ span {
   Contact
 ----------------------------*/
 .contact {
+  color: $c-3;
+  padding: 40px 0;
+  position: relative;
+  margin-bottom: 40px;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background-color: $c-1;
+  }
+
+  &-wrap {
+    @include mq(lg) {
+      padding: 0 60px;
+    }
+  }
+  &-title {
+    font-size: rem(28);
+    margin-bottom: 40px;
+    text-align: center;
+    span {
+      display: inline-block;
+      position: relative;
+    }
+  }
+  &-content {
+    font-size: rem(16);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    @include mq(lg) {
+      font-size: rem(20);
+    }
+  }
+  .button {
+    text-align: center;
+  }
+}
+
+/*----------------------------
+  Form
+----------------------------*/
+.form {
+  color: $c-3;
+  padding: 40px 0;
+  position: relative;
+  margin-bottom: 40px;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background-color: $c-1;
+  }
+
+  &-wrap {
+    @include mq(lg) {
+      padding: 0 60px;
+    }
+  }
+  &-title {
+    font-size: rem(28);
+    margin-bottom: 40px;
+    text-align: center;
+    span {
+      display: inline-block;
+      position: relative;
+    }
+  }
+  &-content {
+    font-size: rem(16);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    @include mq(lg) {
+      font-size: rem(20);
+    }
+  }
+  label {
+    width: 30%;
+    display: inline-block;
+  }
+  input {
+    width: 70%;
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px/5px;
+  }
+  textarea {
+    width: 70%;
+    display: inline-block;
+    height: 200px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px/5px;
+  }
+  &-textarea {
+    vertical-align: top;
+  }
+  &-submit {
+    text-align: center;
+  }
 }
