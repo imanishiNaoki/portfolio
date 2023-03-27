@@ -102,6 +102,7 @@ h5 {
 }
 p {
   margin-bottom: 20px;
+  line-height: 1.9;
 }
 span {
 }
@@ -119,6 +120,7 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
     @include mq(lg) {
       height: 120px;
     }
@@ -128,11 +130,18 @@ span {
   }
   &-nav-wrap {
     display: none;
+    transition: all 0.3s ease-in-out;
     @include mq(lg) {
       display: block;
     }
   }
+  &-nav-modal {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
   &-hamburger {
+    position: relative;
+    z-index: 999;
     @include mq(lg) {
       display: none;
     }
@@ -145,7 +154,20 @@ span {
     }
   }
   &-navi {
-    display: flex;
+    padding-top: 60px;
+    padding-left: 40px;
+    height: 100vh;
+    width: 70vw;
+    position: relative;
+    z-index: 1000;
+    background-color: $c-1;
+    @include mq(lg) {
+      display: flex;
+      padding-top: 0;
+      height: auto;
+      background: none;
+      width: auto;
+    }
     &-list {
       a {
         display: inline-block;
@@ -371,7 +393,6 @@ span {
     position: relative;
     @include mq(lg) {
       font-size: rem(20);
-      width: 50%;
     }
   }
 }
@@ -475,27 +496,104 @@ span {
       font-size: rem(20);
     }
   }
+  &-formarea {
+    p {
+      display: flex;
+      flex-direction: column;
+      @include mq(lg) {
+        display: block;
+      }
+    }
+  }
   label {
-    width: 30%;
+    width: 100%;
     display: inline-block;
+    @include mq(lg) {
+      width: 30%;
+    }
   }
   input {
-    width: 70%;
+    width: 100%;
     display: inline-block;
     border: 1px solid #d9d9d9;
     border-radius: 5px/5px;
+    @include mq(lg) {
+      width: 70%;
+    }
   }
   textarea {
-    width: 70%;
+    width: 100%;
     display: inline-block;
     height: 200px;
     border: 1px solid #d9d9d9;
     border-radius: 5px/5px;
+    @include mq(lg) {
+      width: 70%;
+    }
   }
   &-textarea {
     vertical-align: top;
   }
   &-submit {
     text-align: center;
+  }
+}
+/*----------------------------
+  pagetop
+----------------------------*/
+.page-top {
+  width: 50px;
+  height: 50px;
+  background-color: $c-1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%/50%;
+  border: 1px solid #d1d1d1;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid $c-3;
+    border-bottom: 2px solid $c-3;
+  }
+  &:hover {
+    background-color: $c-2;
+  }
+}
+
+.page-top.is_active {
+  opacity: 1;
+  visibility: visible;
+}
+.header-nav-wrap.is_active {
+  opacity: 1;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  @include mq(lg) {
+    position: initial;
+  }
+}
+.header-nav-modal.is_active {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#707070, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  @include mq(lg) {
+    display: none;
   }
 }

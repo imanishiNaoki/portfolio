@@ -1,6 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
+  const [showNav, setShowNav] = useState(false);
+  const handleClick = () => setShowNav(!showNav);
   return (
     <header className="header">
       <div className="container mx-auto px-4">
@@ -8,12 +10,13 @@ const Header = () => {
           <div className="header-logo">
             <Link to={`/`}>Imanishi Portfolio</Link>
           </div>
-          <button className="header-hamburger">
+          <button className="header-hamburger" onClick={handleClick}>
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <div className="header-nav-wrap">
+          <div className={`header-nav-wrap ${showNav ? "is_active" : ""}`}>
+            <div className={`header-nav-modal ${showNav ? "is_active" : ""}`} onClick={handleClick}></div>
             <nav>
               <ul className="header-navi">
                 <li className="header-navi-list">

@@ -4,6 +4,7 @@ import Info from "./info/info";
 import About from "./about/about";
 import Contact from "./contact/contact";
 import Form from "./form/form";
+import ScrollTop from "./pagescroll";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 const main = () => {
   return (

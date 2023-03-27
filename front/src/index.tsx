@@ -4,10 +4,12 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "./css/index.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
+import ScrollTop from "./components/main/pagescroll";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <BrowserRouter>
+    <ScrollTop />
     <App />
   </BrowserRouter>
 );
