@@ -11,10 +11,8 @@ const form = () => {
             </h2>
             <div className="form-content">
               <p>
-                ホームページ作成、デザイン作成など、 <br />
+                ホームページ作成、デザイン作成など相談を受け付けております。 <br />
                 お問い合わせ内容を入力し送信ボタンを押してください。
-                <br />
-                後日ご連絡させて頂きます。
               </p>
             </div>
             <div className="form-formarea">

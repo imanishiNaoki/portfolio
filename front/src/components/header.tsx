@@ -20,13 +20,17 @@ const Header = () => {
             <nav>
               <ul className="header-navi">
                 <li className="header-navi-list">
-                  <Link to={`/`}>Home</Link>
+                  <Link to={`/`} onClick={handleClick}>
+                    Home
+                  </Link>
                 </li>
                 <li className="header-navi-list">
                   <a href="#about">About</a>
                 </li>
                 <li className="header-navi-list">
-                  <Link to={`/contact`}>Contact</Link>
+                  <Link to={`/contact`} onClick={handleClick}>
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </nav>
