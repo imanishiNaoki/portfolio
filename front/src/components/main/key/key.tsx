@@ -4,7 +4,7 @@ const key = () => {
   return (
     <section id="key">
       <div className="key">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="key-content">
             <p className="key-title">
               WEBで創る、
@@ -16,7 +16,6 @@ const key = () => {
               <br className="sp-show" />
               フロントエンドエンジニア
             </p>
-            <p className="key-text">HTML｜CSS｜JavaScript｜jQuery｜React｜Node.js</p>
             <div className="button">
               <Link to={`/contact`}>Contact</Link>
             </div>
