@@ -41,7 +41,23 @@ const Form = () => {
     }
 
     if (name !== "" && email !== "" && textarea !== "") {
-      window.location.href = "/thanks";
+      const form = new FormData();
+      const today: any = new Date();
+      let year = today.getFullYear();
+      let month = today.getMonth() + 1;
+      let date = today.getDate();
+      const format = year + "/" + month + "/" + date;
+      form.append("date", format);
+      form.append("name", name);
+      form.append("email", email);
+      form.append("textarea", textarea);
+
+      fetch("/api/validation.php", {
+        method: "POST",
+        body: form,
+      });
+      //window.location.href = "/thanks";
+      console.log(form);
     }
   };
   return (

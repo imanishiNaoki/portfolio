@@ -1,6 +1,27 @@
-import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-const info = () => {
+import ReactDOM from "react-dom";
+const Info = () => {
+  const list: any = [];
+  useEffect(() => {
+    async function fetchNews() {
+      const response = await fetch("/api/news.php");
+      const json = await response.json();
+      for (let i = 0; i < 5; i++) {
+        list.push(
+          <li className="info-list-item" key={json[i].id}>
+            <span className={`info-type ${json[i].type}`}>{json[i].type_text}</span>
+            <span className="info-date">{json[i].date}</span>
+            <br className="sp-show" />
+            <span className="info-text" dangerouslySetInnerHTML={{ __html: json[i].title }} />
+          </li>
+        );
+      }
+
+      ReactDOM.render(list, document.getElementById("info-list"));
+    }
+    fetchNews();
+  }, []);
   return (
     <section id="info">
       <div className="info">
@@ -9,26 +30,7 @@ const info = () => {
             <h2 className="info-title">
               <span>Infomation</span>
             </h2>
-            <ul className="info-list">
-              <li className="info-list-item">
-                <span className="info-type -info">お知らせ</span>
-                <span className="info-date">2023/04/04</span>
-                <br className="sp-show" />
-                <span className="info-text">ホームページ制作の受付を開始しました。</span>
-              </li>
-              <li className="info-list-item">
-                <span className="info-type -info">お知らせ</span>
-                <span className="info-date">2023/03/29</span>
-                <br className="sp-show" />
-                <span className="info-text">お問合せフォームを設置いたしました。</span>
-              </li>
-              <li className="info-list-item">
-                <span className="info-type -info">お知らせ</span>
-                <span className="info-date">2023/03/26</span>
-                <br className="sp-show" />
-                <span className="info-text">ホームページをリニューアルしました。</span>
-              </li>
-            </ul>
+            <ul id="info-list" className="info-list"></ul>
             <div className="view-button">
               <Link to={`/info`}>VIEW MORE</Link>
             </div>
@@ -39,4 +41,4 @@ const info = () => {
   );
 };
 
-export default info;
+export default Info;
