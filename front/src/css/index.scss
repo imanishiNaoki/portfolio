@@ -12,10 +12,10 @@ $baseFontSize: 16;
 }
 /*ブレイクポイント*/
 $breakpoints: (
-  "sm": "screen and (min-width: 400px)",
-  "md": "screen and (min-width: 768px)",
-  "lg": "screen and (min-width: 1000px)",
-  "xl": "screen and (min-width: 1200px)",
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
 ) !default;
 @mixin mq($breakpoint: md) {
   @media #{map-get($breakpoints, $breakpoint)} {
@@ -28,6 +28,12 @@ $c-2: #f0e3d9;
 $c-3: #707070;
 $c-4: #ffffff;
 
+._formrun_gotcha {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
 /*----------------------------
   global
 -----------------------------*/
@@ -46,7 +52,7 @@ $c-4: #ffffff;
       position: absolute;
       top: 50%;
       right: 20px;
-      content: "";
+      content: '';
       width: 6px;
       height: 6px;
       border-top: 1px solid #707070;
@@ -67,7 +73,7 @@ $c-4: #ffffff;
       position: absolute;
       top: 50%;
       right: 20px;
-      content: "";
+      content: '';
       width: 6px;
       height: 6px;
       border-top: 1px solid $c-3;
@@ -80,7 +86,7 @@ $c-4: #ffffff;
       position: absolute;
       top: 50%;
       right: 7px;
-      content: "";
+      content: '';
       width: 30px;
       height: 30px;
       border-radius: 50%/50%;
@@ -104,8 +110,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Noto Serif JP", serif;
-  font-family: "Source Serif Pro", serif;
+  font-family: 'Noto Serif JP', serif;
+  font-family: 'Source Serif Pro', serif;
   letter-spacing: 0.1em;
 }
 h1 {
@@ -313,7 +319,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("../img/key-01.jpg");
+  background: url('../img/key-01.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -353,7 +359,7 @@ main {
       display: inline-block;
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         height: 50%;
@@ -415,7 +421,7 @@ main {
       display: inline-block;
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         height: 50%;
@@ -457,7 +463,7 @@ main {
       display: inline-block;
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         height: 50%;
@@ -496,7 +502,7 @@ main {
       display: inline-block;
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         height: 50%;
@@ -522,7 +528,7 @@ main {
       display: inline-block;
       &::before {
         position: absolute;
-        content: "必須";
+        content: '必須';
         bottom: 3px;
         right: -30px;
         display: block;
@@ -589,7 +595,7 @@ main {
     position: absolute;
     top: 32px;
     right: 20px;
-    content: "";
+    content: '';
     width: 10px;
     height: 10px;
     border-top: 2px solid $c-3;

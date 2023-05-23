@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Form = () => {
-  const [name, setName] = useState("");
+  /*   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [textarea, setTextarea] = useState("");
 
@@ -59,55 +59,65 @@ const Form = () => {
       //window.location.href = "/thanks";
       console.log(form);
     }
-  };
+    
+  };*/
+
   return (
-    <section id="end">
-      <div className="end">
-        <div className="container mx-auto px-10 py-16 lg:py-24">
-          <div className="end-wrap">
-            <h2 className="end-title">
-              <span>Contact</span>
-            </h2>
-            <div className="end-content">
-              <p>
-                ホームページ作成、デザイン作成など相談を受け付けております。 <br />
-                お問い合わせ内容を入力し送信ボタンを押してください。
-              </p>
-            </div>
-            <form action="">
-              <div className="end-formarea">
+    <>
+      <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+
+      <section id="end">
+        <div className="end">
+          <div className="container mx-auto px-10 py-16 lg:py-24">
+            <div className="end-wrap">
+              <h2 className="end-title">
+                <span>Contact</span>
+              </h2>
+              <div className="end-content">
                 <p>
-                  <label htmlFor="name" className="form-name">
-                    お名前
-                  </label>
-                  <input type="text" id="name" name="name" value={name} onChange={handleNameChange} />
-                  <span className="name-Validation attention"></span>
+                  ホームページ作成、デザイン作成など相談を受け付けております。 <br />
+                  お問い合わせ内容を入力し送信ボタンを押してください。
                 </p>
-                <p>
-                  <label htmlFor="email" className="form-email">
-                    メールアドレス
-                  </label>
-                  <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} />
-                  <span className="email-Validation attention"></span>
-                </p>
-                <p>
-                  <label htmlFor="textarea" className="form-textarea">
-                    お問合せ内容
-                  </label>
-                  <textarea id="textarea" name="textarea" value={textarea} onChange={handleTextareaChange}></textarea>
-                  <span className="text-Validation attention"></span>
-                </p>
-                <div className="end-submit button">
-                  <button type="submit" onClick={handleSubmit}>
-                    送信
-                  </button>
-                </div>
               </div>
-            </form>
+              <form className="formrun" action="https://form.run/api/v1/r/8ip4p1wf8zqn3j7h5eig33hb" method="post">
+                <div className="end-formarea">
+                  <p>
+                    <label htmlFor="name" className="form-name">
+                      お名前
+                    </label>
+                    <input type="text" id="name" name="お名前" data-formrun-required />
+                    <span className="name-Validation attention" data-formrun-show-if-error="お名前"></span>
+                  </p>
+                  <p>
+                    <label htmlFor="email" className="form-email">
+                      メールアドレス
+                    </label>
+                    <input type="email" id="email" name="email" data-formrun-type="email" data-formrun-required />
+                    <span className="email-Validation attention" data-formrun-show-if-error="メールアドレス"></span>
+                  </p>
+                  <p>
+                    <label htmlFor="textarea" className="form-textarea">
+                      お問合せ内容
+                    </label>
+                    <textarea id="textarea" name="textarea" data-formrun-required></textarea>
+                    <span className="text-Validation attention" data-formrun-show-if-error="お問い合わせ"></span>
+                  </p>
+                  <div className="_formrun_gotcha">
+                    <label htmlFor="_formrun_gotcha">If you are a human, ignore this field</label>
+                    <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabIndex={-1} />
+                  </div>
+                  <div className="end-submit button">
+                    <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">
+                      送信
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

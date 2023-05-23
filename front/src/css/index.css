@@ -8,6 +8,13 @@
 /*rem変換*/
 /*ブレイクポイント*/
 /*カラー変数*/
+._formrun_gotcha {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 /*----------------------------
   global
 -----------------------------*/
