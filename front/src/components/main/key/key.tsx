@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 const key = () => {
   return (
     <section id="key">
@@ -17,7 +17,7 @@ const key = () => {
               フロントエンドエンジニア
             </p>
             <div className="button">
-              <Link to={`/contact`}>Contact</Link>
+              <Link to={`/portfolio/contact`}>Contact</Link>
             </div>
           </div>
         </div>

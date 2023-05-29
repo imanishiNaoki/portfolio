@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 const about = () => {
   return (
     <section id="about">
@@ -21,7 +21,7 @@ const about = () => {
             </div>
           </div>
           <div className="view-button">
-            <Link to={`/about`}>VIEW MORE</Link>
+            <Link to={`/portfolio/about`}>VIEW MORE</Link>
           </div>
         </div>
       </div>

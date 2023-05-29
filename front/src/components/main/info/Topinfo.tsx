@@ -1,11 +1,11 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 const Info = () => {
   const list: any = [];
   useEffect(() => {
     async function fetchNews() {
-      const response = await fetch("/api/news.php");
+      const response = await fetch('/portfolio/api/news.php');
       const json = await response.json();
       for (let i = 0; i < 5; i++) {
         list.push(
@@ -18,7 +18,7 @@ const Info = () => {
         );
       }
 
-      ReactDOM.render(list, document.getElementById("info-list"));
+      ReactDOM.render(list, document.getElementById('info-list'));
     }
     fetchNews();
   }, []);
@@ -32,7 +32,7 @@ const Info = () => {
             </h2>
             <ul id="info-list" className="info-list"></ul>
             <div className="view-button">
-              <Link to={`/info`}>VIEW MORE</Link>
+              <Link to={`/portfolio/info`}>VIEW MORE</Link>
             </div>
           </div>
         </div>

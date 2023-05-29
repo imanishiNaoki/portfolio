@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import youtube from "../img/youtube.png";
-import twitter from "../img/twitter.png";
-import github from "../img/github.png";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import youtube from '../img/youtube.png';
+import twitter from '../img/twitter.png';
+import github from '../img/github.png';
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
   const handleClick = () => setShowNav(!showNav);
@@ -11,33 +11,33 @@ const Header = () => {
       <div className="container mx-auto px-6 md:px-10 ">
         <div className="header-wrap">
           <div className="header-logo">
-            <Link to={`/`}>Imanishi Portfolio</Link>
+            <Link to={`/portfolio/index.html`}>Imanishi Portfolio</Link>
           </div>
-          <button className={`header-hamburger ${showNav ? "is_active" : ""}`} onClick={handleClick}>
+          <button className={`header-hamburger ${showNav ? 'is_active' : ''}`} onClick={handleClick}>
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <div className={`header-nav-wrap ${showNav ? "is_active" : ""}`} onClick={handleClick}>
+          <div className={`header-nav-wrap ${showNav ? 'is_active' : ''}`} onClick={handleClick}>
             <nav>
               <ul className="header-navi">
                 <li className="header-navi-list">
-                  <Link to={`/`} onClick={handleClick}>
+                  <Link to={`/portfolio/index.html`} onClick={handleClick}>
                     Home
                   </Link>
                 </li>
                 <li className="header-navi-list">
-                  <Link to={`/info`} onClick={handleClick}>
+                  <Link to={`/portfolio/info`} onClick={handleClick}>
                     Infomation
                   </Link>
                 </li>
                 <li className="header-navi-list">
-                  <Link to={`/about`} onClick={handleClick}>
+                  <Link to={`/portfolio/about`} onClick={handleClick}>
                     About
                   </Link>
                 </li>
                 <li className="header-navi-list">
-                  <Link to={`/contact`} onClick={handleClick}>
+                  <Link to={`/portfolio/contact`} onClick={handleClick}>
                     Contact
                   </Link>
                 </li>
