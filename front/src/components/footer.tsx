@@ -53,7 +53,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer-copy">
-          <span>©️2023 Imanishi Naoki</span>
+          <span>&copy;2023 Imanishi Naoki</span>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 const contact = () => {
   return (
     <section id="contact">
@@ -17,7 +17,7 @@ const contact = () => {
               </p>
             </div>
             <div className="button">
-              <Link to={`/contact`}>Contact</Link>
+              <Link to={`/portfolio/contact`}>Contact</Link>
             </div>
           </div>
         </div>
